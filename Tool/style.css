@@ -1,14 +1,14 @@
 :root{
   font-size: 24px;
   font-family: cursive;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
 background: rgb(0,208,211);
 background: linear-gradient(45deg, rgba(0,208,211,1) 0%, rgba(253,187,45,1) 100%);
-min-height: 100vh;
+height: 100vh;
 }
 
 .header{
@@ -39,22 +39,24 @@ h2{
   grid-gap: 1rem;
 }
 
-.wrapper{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  height: 100vh;
-  align-items: center;
-  justify-items: center;
-  margin: 2rem;
-  grid-gap: 1rem;
-}
-
 .content {
-  display: flex;
+  height: 3rem;
   background: hsla(0, 0%, 100%, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .content a{
   text-decoration: none;
   color: hsla(0, 0%, 0%, 0.6);
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  border: 3px solid black;
+  margin: 2rem;
+  grid-gap: 1.5rem;
 }
