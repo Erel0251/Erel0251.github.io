@@ -1,0 +1,33 @@
+:root {
+  --Dark-Cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-Dark-Blue: hsl(212, 21%, 14%);
+  --Dark-Grayish-Blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 14px;
+  /*font-family: Montserrat;*/
+}
+
+.image {
+  grid-area: image;
+}
+
+.content {
+  grid-area: main;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  grid-template-areas:
+  "image main";
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    grid-template-areas:
+    "image"
+    "main";
