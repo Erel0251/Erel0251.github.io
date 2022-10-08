@@ -1,5 +1,6 @@
 :root {
   --Dark-Cyan: hsl(158, 36%, 37%);
+  --Very-Dark-Cyan: hsl(158, 48%, 19%);
   --Cream: hsl(30, 38%, 92%);
   --Very-Dark-Blue: hsl(212, 21%, 14%);
   --Dark-Grayish-Blue: hsl(228, 12%, 48%);
@@ -75,7 +76,7 @@ main, .sub-title {
   color: var(--Dark-Grayish-Blue);
 }
 
-footer {
+.footer {
   background: var(--Dark-Cyan);
   color: var(--White);
   margin: 5px;
@@ -85,8 +86,12 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
+.footer:hover, .footer:visited{
+  background: var(--Very-Dark-Cyan);
+}
 .icon {
   padding-right: 20px;
 }
