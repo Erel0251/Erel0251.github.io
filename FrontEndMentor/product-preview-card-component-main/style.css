@@ -12,7 +12,7 @@ html {
 
 body {
   font-size: 18px;
-  min-height: 100vh;
+  min-height: calc(100% - 11px) ;
   background-color: var(--Cream);
   display: grid;
   place-content: center;
@@ -20,10 +20,11 @@ body {
 }
 
 .image {
+  content: url("./images/image-product-desktop.jpg");
   grid-area: image;
   border-radius: 10px 0px 0px 10px;
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 .content {
@@ -40,38 +41,70 @@ body {
   border-radius: 10px;
   padding: 0px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2.5fr 3fr;
   grid-template-areas:
   "image main";
 }
 
 main, .sub-title {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: var(--Dark-Grayish-Blue);
 }
 
 .title {
-  font-family: "Fraunces";
+  font-family: "Fraunces", serif;
   font-size: 35px;
   font-weight: bold;
   color: var(--Very-Dark-Blue);
 }
 
 .price {
-  font-family: "Fraunces";
+  font-family: "Fraunces", serif;
   font-size: 35px;
   color: var(--Dark-Cyan);
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .sales {
   font-size: 20px;
+  margin-left: 20px;
   text-decoration: line-through;
   color: var(--Dark-Grayish-Blue);
 }
 
+footer {
+  background: var(--Dark-Cyan);
+  color: var(--White);
+  margin: 5px;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-@media screen and (max-width: 375px) {
+.icon {
+  padding-right: 20px;
+}
+
+
+@media screen and (max-width: 650px) {
+  .image {
+  content: url("./images/image-product-mobile.jpg");
+  border-radius: 10px 10px 0px 0px;
+  }
+
   .container {
+    width: 375px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
     grid-template-areas:
     "image"
     "main";
+  }
+}
+

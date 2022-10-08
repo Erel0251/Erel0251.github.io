@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" type="text/css" href="./style.css" >
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Fraunces">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces&family=Montserrat&display=swap">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Product preview card component</title>
@@ -18,7 +19,7 @@
 </head>
 <body>
   <div class="container">
-    <img class="image" src="./images/image-product-desktop.jpg" alt="image-product" />
+    <img class ="image"  alt="image-product-mobile">
 
     <articles class="content">
       <div class="sub-title">PERFUME</div>
@@ -30,10 +31,14 @@
       Perfumer-Creator for the House of CHANEL.
       </main>
 
-      <div class="price">$149.99 <span class="sales">$169.99 </span> </div>
+      <div class="price">
+        <div class="cost">$149.99</div>
+        <div class="sales">$169.99 </div> 
+      </div>
 
       <footer>
-      Add to Cart
+        <img class="icon" src="./images/icon-cart.svg">
+        <div>Add to Cart</div>
       </footer>
       
     </articles>
